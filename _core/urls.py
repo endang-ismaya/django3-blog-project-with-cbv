@@ -22,6 +22,6 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls', namespace='blog')),
-    path('accounts/login', views.login, name='login'),
-    path('áccount/logout', views.logout, name='logut', kwargs={'next_page': '/'})
+    path('accounts/login', views.LoginView.as_view(), name='login'),
+    path('account/logout', views.LogoutView.as_view(), name='logout', kwargs={'next_page': 'login'})
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

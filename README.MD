@@ -1,4 +1,4 @@
-# Python Django Blog Project - Forms
+# Python Django Blog With CBV
 
 #### Tech:
 - Python Django 3
